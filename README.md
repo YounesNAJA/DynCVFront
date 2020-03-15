@@ -16,12 +16,12 @@ docker image pull younesnaja/dyncvfrontnode:latest
 
 #### Clone this repository
 ```git
-git clone https://github.com/YounesNAJA/DynCVFront-Dockerfile
+git clone https://github.com/YounesNAJA/DynCVFront.git
 ```
 
 #### Build the image
 ```linux
-cd DynCVFront-Dockerfile
+cd DynCVFront
 ```
 
 ```linux
