@@ -1,27 +1,42 @@
-# DynCVFront
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+This repo is contains Dockerfile and all resources needed to build and run the DynCV Front app.
 
-## Development server
+## Pull the image from DockerHub
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Download the image file [here](https://hub.docker.com/r/younesnaja/dyncvfrontnode).
 
-## Code scaffolding
+```docker
+docker image pull younesnaja/dyncvfrontnode:latest
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+### Build the image you just downloaded
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Clone this repository
+```git
+git clone https://github.com/YounesNAJA/DynCVFront-Dockerfile
+```
 
-## Running unit tests
+#### Build the image
+```linux
+cd DynCVFront-Dockerfile
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```linux
+docker build -t younesnaja/dyncvfrontnode:latest .
+```
+#### Create a container from the image you just built
+Map 8080 port from the container to 80 port in the host machine
 
-## Running end-to-end tests
+```docker
+docker container run -p 9090:80 younesnaja/dyncvfrontnode:latest
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
