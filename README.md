@@ -31,7 +31,7 @@ docker build -t younesnaja/dyncvfrontnode:latest .
 Map 8080 port from the container to 80 port in the host machine
 
 ```docker
-docker container run -p 9090:80 younesnaja/dyncvfrontnode:latest
+nohup docker container run -p 80:80 younesnaja/dyncvfrontnode:latest &
 ```
 
 ## Contributing
