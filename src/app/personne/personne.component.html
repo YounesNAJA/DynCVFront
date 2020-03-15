@@ -1,0 +1,79 @@
+<div *ngIf="personne.active">
+  <h1>Coordonnées :</h1>
+
+  <p>Nom : {{ personne.nom }}</p>
+  <p>Titre : {{ personne.titre }}</p>
+  <p>Téléphone : {{ personne.telephone }}</p>
+  <p>Email : {{ personne.email }}</p>
+
+  <p>Adresse : {{ personne.adresse.numero }} {{ personne.adresse.rue }}, {{ personne.adresse.codePostal }} {{ personne.adresse.ville }}</p>
+  <p>Pays : {{ personne.adresse.pays }}</p>
+
+  <p>Prénom : {{ personne.prenom }}</p>
+
+  <h1>Expériences :</h1>
+  <div *ngFor="let experience of personne.experiences">
+    <p>Date de début : {{ experience.debut }}</p>
+    <p>Date de fin : {{ experience.fin }}</p>
+    <p>Titre : {{ experience.titre }}</p>
+
+    <div>
+      <p>Client : {{ experience.client.nom }}</p>
+      <p>Localisation : {{ experience.client.ville }}, {{ experience.client.pays }}</p>
+    </div>
+
+    <h3>Projet :</h3>
+    <div *ngFor="let projet of experience.projets">
+
+      <h5>{{ projet.nom }}</h5>
+      <p>Description : {{ projet.description }}</p>
+
+      <ul *ngFor="let tache of projet.taches">
+        <li>{{ tache }}</li>
+      </ul>
+
+      <ul *ngFor="let technologie of projet.technologies">
+        <li>{{ technologie }}</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!--Formation-->
+  <h1>Formation :</h1>
+  <div *ngFor="let formation of personne.formations">
+
+    <p>Etablissement : {{ formation.etablissement }} - {{ formation.ville }}</p>
+    <p>Etablissement : {{ formation.etablissement }}</p>
+    <p>Diplôme : {{ formation.diplome }}, option : {{ formation.option }}</p>
+    <p>Début : {{ formation.anneeDebut }}</p>
+    <p>Fin : {{ formation.anneeFin }}</p>
+
+  </div>
+
+  <!--Compétences-->
+  <h1>Compétences :</h1>
+  <div *ngFor="let competence of personne.competences">
+
+    "categorie": "Analyse et Conception",
+    "elements": [
+    "Merise",
+    "UML 2.0",
+    "Design Patterns"
+    ]
+    <p>categorie : {{ competence.categorie }}</p>
+
+    <ul *ngFor="let element of competence.elements">
+      <li>{{ element }}</li>
+    </ul>
+
+
+  </div>
+
+  <!--Langues-->
+  <h1>Langues :</h1>
+  <div *ngFor="let langue of personne.langues">
+    <p>{{ langue.nom }} - {{ langue.niveau }}</p>
+  </div>
+</div>
