@@ -21,7 +21,7 @@ git clone https://github.com/YounesNAJA/DynCVFront.git
 
 #### Build the image
 ```linux
-cd DynCVFront-Dockerfile
+cd DynCVFront
 ```
 
 ```linux
