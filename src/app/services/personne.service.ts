@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class PersonneService {
   // private baseUrl = "http://www.younesnaja.com/personnes";
-  private baseUrl = "http://localhost:9090/personnes";
+  private baseUrl = "http://localhost:8080/personnes";
 
   constructor(private httpClient: HttpClient) { }
 
